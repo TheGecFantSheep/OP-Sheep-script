@@ -26,7 +26,7 @@ if auto_updater == true then error("Invalid auto-updater lib. Please delete your
 
 
 auto_updater.run_auto_update({
-    source_url="",
+    source_url="git@github.com:TheGecFantSheep/OP-Sheep-script.git",
     script_relpath=lib/auto-updater.lua,
     verify_file_begins_with="--"
 })
