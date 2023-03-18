@@ -27,7 +27,7 @@ if auto_updater == true then error("Invalid auto-updater lib. Please delete your
 
 
 auto_updater.run_auto_update({
-    source_url="https://github.com/TheGecFantSheep/OP-Sheep-script/blob/38aa50c50d90e791c588e6923e3545dd0867968f/OP_Sheep_script.pluto",
+    source_url="https://raw.githubusercontent.com/TheGecFantSheep/OP-Sheep-script/main/OP_Sheep_script.pluto",
     script_relpath=SCRIPT_RELPATH,
     verify_file_begins_with="--"
 })
