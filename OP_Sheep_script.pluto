@@ -77,8 +77,6 @@ end
 
 custselc = menu.list(menu.my_root(), "Lobby Crashes", {}, "", function() end)
 
-menu.divider(custselc, "Lobby Crashes")
-
 menu.action(custselc, "Ruiner Crash V1", {}, "Doesn't cause any crash events but will crash the whole lobby", function()
     local spped = PLAYER.PLAYER_PED_ID()
     local ppos = ENTITY.GET_ENTITY_COORDS(spped, true)
