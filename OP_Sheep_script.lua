@@ -25,7 +25,7 @@ if auto_updater == true then error("Invalid auto-updater lib. Please delete your
 SCRIPT_RUN_NAME = "OP_Sheep_script"
 
 auto_updater.run_auto_update({
-    source_url="https://raw.githubusercontent.com/TheGecFantSheep/OP-Sheep-script/main/OP_Sheep_script.pluto",
+    source_url="https://raw.githubusercontent.com/TheGecFantSheep/OP-Sheep-script/main/OP_Sheep_script.lua",
     script_relpath=SCRIPT_RELPATH,
     script_run_name=SCRIPT_RUN_NAME,
     verify_file_begins_with="--"
@@ -1456,7 +1456,7 @@ end)
     ENTITY.ATTACH_ENTITY_TO_ENTITY(cone, cone, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, true, true, true, false, 0, true)
     end)
 
-
+	
     models = {
     "h4_prop_bush_buddleia_low_01",
     "h4_prop_bush_ear_aa",
@@ -1567,7 +1567,7 @@ end)
         end
     end
   end)
-
+    --test
     menu.toggle_loop(Crash, "Stands crashes flood", {"standbumfuck"}, "Will spam Stands crashes until the player leaves", function()
             menu.trigger_commands("crash" .. players.get_name(pid))
             menu.trigger_commands("choke" .. players.get_name(pid))
