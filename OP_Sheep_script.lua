@@ -22,7 +22,7 @@ if not status then
 end
 if auto_updater == true then error("Invalid auto-updater lib. Please delete your Stand/Lua Scripts/lib/auto-updater.lua and try again") end
 
-SCRIPT_RUN_NAME = "OP_Sheep_script"
+SCRIPT_RUN_NAME = "OP_Sheep_script.lua"
 
 auto_updater.run_auto_update({
     source_url="https://raw.githubusercontent.com/TheGecFantSheep/OP-Sheep-script/main/OP_Sheep_script.lua",
