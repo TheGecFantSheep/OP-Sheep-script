@@ -35,7 +35,6 @@ util.keep_running()
 util.require_natives("1640181023")
 
 protections = menu.list(menu.my_root(), "Protections", {}, "", function() end)
-protections = menu.list(menu.my_root(), "Protections", {}, "", function() end)
 do_the_funny = menu.list(menu.my_root(), "Do the funny", {}, "", function() end)
 cleanse = menu.list(menu.my_root(), "Cleanse", {}, "", function() end)
 
